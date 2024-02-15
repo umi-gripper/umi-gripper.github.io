@@ -64,14 +64,14 @@
 						<div class="box alt" style="margin-bottom: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
-									<span class="image fit" style="margin-bottom: 0.5em;">
+									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/task_dish_washing.mp4" type="video/mp4"> </video>
 									</span>
 									Dish Washing
 								</div>
 
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
-									<span class="image fit" style="margin-bottom: 0.5em;">
+									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/task_cloth_folding.mp4" type="video/mp4"> </video>
 									</span>
 									Cloth Folding
@@ -79,14 +79,14 @@
 							</div>
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
-									<span class="image fit" style="margin-bottom: 0.5em;">
+									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/task_dynamic_tossing.mp4" type="video/mp4"> </video>
 									</span>
 									Dynamic Tossing
 								</div>
 
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
-									<span class="image fit" style="margin-bottom: 0.5em;">
+									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/task_cup_arrangement.mp4" type="video/mp4"> </video>
 									</span>
 									Cup Arrangement
@@ -100,7 +100,7 @@
 						<hr>
 						<h3>Paper</h3>
 						<p style="margin-bottom: 1em;">
-							Latest version: <a href="https://arxiv.org/abs/2302.11553">arXiv</a> or <a href="diffusion_policy_2023.pdf">here</a>.
+							Latest version: <a href="https://arxiv.org/abs/2302.11553">arXiv</a> or <a href="umi.pdf">here</a>.
 							<!-- <br>
 							In Submission
 							<br> -->
@@ -199,19 +199,19 @@
 					
 						<hr>
 						<h3>Hardware Design</h3>
-
-						<!-- <div class="12u$">
-							<span class="image fit" style="max-width: 80%; border: 0px solid; border-color: #888888; margin-left: auto; margin-right: auto">
-								<img src="images/structure-inference.png" alt="">
-							</span>
-						</div> -->
-
-						<div class="row 50% uniform" style="width: 100%;">
+						<b>How can we capture sufficient information for a wide variety of tasks with just a wrist-mounted camera?</b>
+						<br>
+						UMI’s data collection hardware takes the form of a hand-held parallel jaw gripper, mounted with a GoPro camera ①.
+						<br>
+						On the observation side, it needs to capture sufficient visual context to infer action ② and critical depth information ③.
+						<br>
+						On the action side, it needs to capture precise robot action under fast human motion ④, 
+						detailed subtle adjustments on griping width ⑤, and automatically check whether each demonstration is valid given the robot hardware kinematics ⑥.
+						<div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
 							<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
-								<span class="image fit" style="margin-bottom: 0.5em;">
+								<span class="image fit">
 									<img src="images/UMI_hardware.jpg" alt="">
 								</span>
-								Ours (CLIP-pretrained ViT as Vision Encoder)
 							</div>
 						</div>
 
@@ -235,7 +235,7 @@
 
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
 									<span class="image fit" style="margin-bottom: 0.5em;">
-										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_cloth_no_rel.mp4" type="video/mp4"> </video>
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_dish_resnet.mp4" type="video/mp4"> </video>
 									</span>
 									ResNet as Vision Encoder
 								</div>
@@ -372,6 +372,7 @@
 
 						<hr>
 						<h3>Robustness</h4>
+						The learned policy is robust against different inference time perturbations and completes the tasks.
 						<div class="box alt" style="margin-bottom: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
