@@ -252,10 +252,10 @@
 						<br>
 						UMI’s data collection hardware takes the form of a hand-held parallel jaw gripper, mounted with a GoPro camera ①.
 						<br>
-						On the observation side, it needs to capture sufficient visual context to infer action ② and critical information like depth ③.
+						To gather policy-deployable observations, UMI needs to capture sufficient visual context to infer action ② and critical information like depth ③.
 						<br>
-						On the action side, it needs to capture precise robot action under fast human motion ④, 
-						detailed subtle adjustments on griping width ⑤, and automatically check whether each demonstration is valid given the robot hardware kinematics ⑥.
+						To obtain action data leading to deployable policies, UMI needs to capture precise robot action under fast human motion ④, 
+						fine adjustments on griping width ⑤, and automatically check whether each demonstration is valid under the specific robot kinematic constraints ⑥.
 						<div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
 							<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
 								<span class="image fit">
@@ -295,8 +295,8 @@
 						<hr>
 						<h3>Capability Experiments</h3>
 						
-						<h4>(1) Dynamic Tossing</h4>
-						<u><b>Task</b></u> The robot is tasked to sort 6 objects by tossing them to the corresponding bin. The 3 spherical objects (baseball, orange, apple) should be tossed into the round bin, while the 3 Lego Duplo pieces go into the rectangular bin.
+						<h4>(1) Dynamic Tossing &#129342; </h4>
+						<u><b>Task</b></u> The robot is tasked to sort 6 objects by tossing them to the corresponding bin. The 3 spherical objects (baseball &#9918;, orange &#127818;, apple &#127822;) should be tossed into the round bin, while the 3 Lego Duplo pieces go into the rectangular bin.
 						<!-- <br>
 						<u><b>Capability</b></u> It demonstrates UMI’s ability to capture and transfer fluid and rapid human motions, precise hand-eye coordination (between RGB and propriocep- tion) and timing alignment (between robot and gripper). -->
 						<br>
@@ -321,7 +321,7 @@
 							</div>
 						</div>
 
-						<h4>(2) Cup Arrangement</h4>
+						<h4>(2) Cup Arrangement &#9749; </h4>
 						<u><b>Task</b></u> Pick up and place an espresso cup on the saucer with its handle facing to the left of the robot.
 						<!-- <br>
 						<u><b>Capability</b></u> This task tests the system’s ability to learn both prehensile (pick and place) and non-prehensile actions (i.e., pushing to reorientate the cup). It also tests UMI's capability of learning multi-modal action distributions and sense relative depth through monocular camera observation and side mirrors. -->
@@ -352,7 +352,7 @@
 							</div>
 						</div>
 						
-						<h4>(3) Bimanual Cloth Folding</h4>
+						<h4>(3) Bimanual Cloth Folding &#128090; </h4>
 						<u><b>Task</b></u> Two robot arms need to coordinate and fold the sweater’s sleeves inward, then fold up the bottom hem, rotate 90 degrees, and finally fold the sweater in half again.
 						<!-- <br>
 						<u><b>Capability</b></u> It tests UMI’s ability to synchronize two-arm coordination. -->
@@ -378,7 +378,7 @@
 						</div>
 
 
-						<h4>(4) Dish Washing</h4>
+						<h4>(4) Dish Washing &#127869; </h4>
 						<u><b>Task</b></u> For successful dish washing, the robots need to sequentially execute 7 dependent actions: turn on faucet, grasp plate, pick up sponge, wash and wipe plate until ketchups are removed, place plate, place the sponge and turn off faucet.
 						<!-- <br>
 						<u><b>Capability</b></u> It is an ultra-long horizon task, involving complex fluid (i.e., ketchup), deformable tool (i.e., sponge), and constrained articulated object (i.e., faucet). The policy also need to be semantically robust to the concept of “cleanliness”.  -->
@@ -448,6 +448,7 @@
 
 						<hr>
 						<h3>Data Collection Methods</h3>
+						Thanks to its portablity and intuitive design, UMI allows for &#9889; fast data collection at a rate of 30 seconds/demonstration.
 				        <h4>Comparison with Other Methods</h4>
 						For the cup arrangement task, UMI gripper is over 3× faster than teleportation, reaching 48% of human hand speed.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
