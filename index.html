@@ -63,10 +63,28 @@
 
 						<div class="box alt" style="margin-bottom: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
-								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									Human Demonstration with UMI
+								</div>
+								
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 66.67%">
+									Fully Autonomous Policy Rollout
+								</div>
+							</div>
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
 									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
-											<source src="videos/task_dish_washing_1x.mp4" type="video/mp4">	
+											<source src="videos/teaser_data_collection_dish.mp4" type="video/mp4">	
+										</video>
+									</span>
+									<!-- Dish Washing Data Collection-->
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/task_dish_washing_1x_compressed.mp4" type="video/mp4">	
 										</video>
 										<div style="position: absolute; top: 2%; right: 1%">
 											<p style="color: white; text-align: center; font-size: 2em">1x</p>
@@ -75,10 +93,10 @@
 									<!-- Dish Washing -->
 								</div>
 
-								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
 									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
-											<source src="videos/task_cloth_folding_1x.mp4" type="video/mp4">
+											<source src="videos/task_cloth_folding_1x_compressed.mp4" type="video/mp4">
 										</video>
 										<div style="position: absolute; top: 2%; right: 1%">
 											<p style="color: white; text-align: center; font-size: 2em">1x</p>
@@ -88,22 +106,19 @@
 								</div>
 							</div>
 							<div class="row 50% uniform" style="width: 100%">
-								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
 									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
-											<source src="videos/task_dynamic_tossing_1x.mp4" type="video/mp4">
+											<source src="videos/teaser_data_collection_cup.mp4" type="video/mp4">	
 										</video>
-										<div style="position: absolute; top: 2%; right: 1%">
-											<p style="color: white; text-align: center; font-size: 2em">1x</p>
-										</div>
 									</span>
-									<!-- Dynamic Tossing -->
+									<!-- Cup Arrangement Data Collection-->
 								</div>
-
-								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+								
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
 									<span class="image fit">
 										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
-											<source src="videos/task_cup_arrangement_1x.mp4" type="video/mp4">
+											<source src="videos/task_cup_arrangement_1x_compressed.mp4" type="video/mp4">
 										</video>
 										<div style="position: absolute; top: 2%; right: 1%">
 											<p style="color: white; text-align: center; font-size: 2em">1x</p>
@@ -111,8 +126,21 @@
 									</span>
 									<!-- Cup Arrangement -->
 								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/task_dynamic_tossing_1x_compressed.mp4" type="video/mp4">
+										</video>
+										<div style="position: absolute; top: 2%; right: 1%">
+											<p style="color: white; text-align: center; font-size: 2em">1x</p>
+										</div>
+									</span>
+									<!-- Dynamic Tossing -->
+								</div>
 							</div>
 						</div>
+								
 
 						<p>We present Universal Manipulation Interface (UMI) -- a data collection and policy learning framework that allows direct skill transfer from in-the-wild human demonstrations to deployable robot policies. UMI employs hand-held grippers coupled with careful interface design to enable portable, low-cost, and information-rich data collection for challenging bimanual and dynamic manipulation demonstrations. To facilitate deployable policy learning, UMI incorporates a carefully designed policy interface with inference-time latency matching and a relative-trajectory action representation. The resulting learned policies are hardware-agnostic and deployable across multiple robot platforms. Equipped with these features, UMI framework unlocks new robot manipulation capabilities, allowing zero-shot generalizable dynamic, bimanual, precise, and long-horizon behaviors, by only changing the training data for each task. We demonstrate UMI’s versatility and efficacy with comprehensive real-world experiments, where policies learned via UMI zero-shot generalize to novel environments and objects when trained on diverse human demonstrations.
 						</p>
@@ -238,7 +266,7 @@
 ·
 						<hr>
 						<h3>Policy Robustness</h4>
-						The learned policy is robust against different inference time perturbations and completes the tasks.
+						Enabled by our unique wrist-only camera configuration and camera-centric action representation, our robot systems are calibration free (works even with base movement) and robust against distractors and lighting changes.
 						<div class="box alt" style="margin-bottom: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
@@ -298,7 +326,7 @@
 						<!-- <br>
 						<u><b>Capability</b></u> This task tests the system’s ability to learn both prehensile (pick and place) and non-prehensile actions (i.e., pushing to reorientate the cup). It also tests UMI's capability of learning multi-modal action distributions and sense relative depth through monocular camera observation and side mirrors. -->
 						<br>
-						<u><b>Ablation</b></u> We deployed the same policy checkpoint on a Franka Emika FR2 robot and it worked pretty well. The absolute action baseline performs surprisingly poorly, likely due to inaccurate calibration between the SLAM and robot base coordinate frames.
+						<u><b>Ablation</b></u> UMI data is robot agnostic. Here we can deploy the same policy on both UR5e and Franka robots. In fact, you can deploy it on any robot with parallel jaw stroke >85mm.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
@@ -376,8 +404,7 @@
 
 						<hr>
 						<h3>In-the-wild Generalization Experiments</h3>
-						<h4> Data Collection</h4>
-						Within 20 man-hours, 3 demonstrators collected 1400 demonstrations across 30 diverse physical locations.
+						With UMI, you can go to any home, any restaurant and start data collection within 2 minutes.
 						<!-- The demonstrations involved 15 espresso cups of different colors, shapes, and materials. -->
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
@@ -397,9 +424,7 @@
 							</div>
 						</div>
 
-						<h4> In-the-wild Evaluation</h4>
-						We evaluate UMI’s ability to produce generalizable visuomotor policies by scaling up the cup arrangement task to novel environments and novel objects.
-						<br>
+						With a diverse in-the-wild cup manipulation dataset, we can train a diffusion policy that generalizes to the clearly unseen objects and environments, including the top of a water fountain!
 
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
