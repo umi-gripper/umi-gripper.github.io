@@ -252,7 +252,7 @@
 						<br>
 						UMI’s data collection hardware takes the form of a hand-held parallel jaw gripper, mounted with a GoPro camera ①.
 						<br>
-						On the observation side, it needs to capture sufficient visual context to infer action ② and critical depth information ③.
+						On the observation side, it needs to capture sufficient visual context to infer action ② and critical information like depth ③.
 						<br>
 						On the action side, it needs to capture precise robot action under fast human motion ④, 
 						detailed subtle adjustments on griping width ⑤, and automatically check whether each demonstration is valid given the robot hardware kinematics ⑥.
@@ -266,7 +266,7 @@
 ·
 						<hr>
 						<h3>Policy Robustness</h4>
-						Enabled by our unique wrist-only camera configuration and camera-centric action representation, our robot systems are calibration free (works even with base movement) and robust against distractors and lighting changes.
+						Enabled by our unique wrist-only camera setup and camera-centric action representations, UMI is 100% calibration-free (functioning even with base movement) and robust against distractors and drastic lighting changes.
 						<div class="box alt" style="margin-bottom: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
@@ -300,7 +300,7 @@
 						<!-- <br>
 						<u><b>Capability</b></u> It demonstrates UMI’s ability to capture and transfer fluid and rapid human motions, precise hand-eye coordination (between RGB and propriocep- tion) and timing alignment (between robot and gripper). -->
 						<br>
-						<u><b>Ablation</b></u> Without inference-time latency matching, we can visually observe the policy’s movement is much more jittery due to the out-of-sync observations and executions.
+						<u><b>Ablation</b></u> Without inference-time latency matching, the policy exhibits significantly more jittery movements, due to the misalignment between observations and action executions.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
@@ -322,11 +322,11 @@
 						</div>
 
 						<h4>(2) Cup Arrangement</h4>
-						<u><b>Task</b></u> Place an espresso cup on the saucer with its handle facing to the left of the robot.
+						<u><b>Task</b></u> Pick up and place an espresso cup on the saucer with its handle facing to the left of the robot.
 						<!-- <br>
 						<u><b>Capability</b></u> This task tests the system’s ability to learn both prehensile (pick and place) and non-prehensile actions (i.e., pushing to reorientate the cup). It also tests UMI's capability of learning multi-modal action distributions and sense relative depth through monocular camera observation and side mirrors. -->
 						<br>
-						<u><b>Ablation</b></u> UMI data is robot agnostic. Here we can deploy the same policy on both UR5e and Franka robots. In fact, you can deploy it on any robot with parallel jaw stroke >85mm.
+						<u><b>Ablation</b></u> Data collected by UMI is robot agnostic. Here we can deploy the same policy on both UR5e and Franka robots. In fact, you can deploy it on any robot equipped with a parallel jaw stroke > 85mm.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
@@ -353,7 +353,7 @@
 						</div>
 						
 						<h4>(3) Bimanual Cloth Folding</h4>
-						<u><b>Task</b></u> Two robot arms need to coordinate and fold the sweater’s sleeves inward, fold up the bottom hem, rotate 90 degrees, and finally fold the sweater in half again.
+						<u><b>Task</b></u> Two robot arms need to coordinate and fold the sweater’s sleeves inward, then fold up the bottom hem, rotate 90 degrees, and finally fold the sweater in half again.
 						<!-- <br>
 						<u><b>Capability</b></u> It tests UMI’s ability to synchronize two-arm coordination. -->
 						<br>
@@ -379,11 +379,11 @@
 
 
 						<h4>(4) Dish Washing</h4>
-						<u><b>Task</b></u> The robots need to execute 7 steps of sequentially dependent actions (turn on faucet, grasp plate, pick up sponge, wash and wipe plate until ketchups are removed, place plate, place the sponge and turn off faucet)
+						<u><b>Task</b></u> For successful dish washing, the robots need to sequentially execute 7 dependent actions: turn on faucet, grasp plate, pick up sponge, wash and wipe plate until ketchups are removed, place plate, place the sponge and turn off faucet.
 						<!-- <br>
 						<u><b>Capability</b></u> It is an ultra-long horizon task, involving complex fluid (i.e., ketchup), deformable tool (i.e., sponge), and constrained articulated object (i.e., faucet). The policy also need to be semantically robust to the concept of “cleanliness”.  -->
 						<br>
-						<u><b>Ablation</b></u> The baseline policy with ResNet-34 as vision encoder learned an non-reactive behavior and ignored any variation in plate or sponge position.
+						<u><b>Ablation</b></u> The baseline policy trained with ResNet-34 as vision encoder, yielded non-reactive behaviors towards variations in plate or sponge position.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
@@ -424,7 +424,7 @@
 							</div>
 						</div>
 
-						With a diverse in-the-wild cup manipulation dataset, we can train a diffusion policy that generalizes to the clearly unseen objects and environments, including the top of a water fountain!
+						With a diverse in-the-wild cup manipulation dataset, UMI enabled us to train a diffusion policy that generalizes to extremely out-of-distribution objects and environments, even including serving expresso cup on top of a water fountain!
 
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
@@ -449,7 +449,7 @@
 						<hr>
 						<h3>Data Collection Methods</h3>
 				        <h4>Comparison with Other Methods</h4>
-						On the cup arrangement task, the UMI gripper is more than 3× faster than teleportation, at 48% speed of the human hand.
+						For the cup arrangement task, UMI gripper is over 3× faster than teleportation, reaching 48% of human hand speed.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
