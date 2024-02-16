@@ -252,10 +252,10 @@
 						<br>
 						UMI’s data collection hardware takes the form of a hand-held parallel jaw gripper, mounted with a GoPro camera ①.
 						<br>
-						On the observation side, it needs to capture sufficient visual context to infer action ② and critical information like depth ③.
+						To gather policy-deployable observations, UMI needs to capture sufficient visual context to infer action ② and critical information like depth ③.
 						<br>
-						On the action side, it needs to capture precise robot action under fast human motion ④, 
-						detailed subtle adjustments on griping width ⑤, and automatically check whether each demonstration is valid given the robot hardware kinematics ⑥.
+						To obtain action data leading to deployable policies, UMI needs to capture precise robot action under fast human motion ④, 
+						fine adjustments on griping width ⑤, and automatically check whether each demonstration is valid under the specific robot kinematic constraints ⑥.
 						<div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
 							<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
 								<span class="image fit">
@@ -448,6 +448,7 @@
 
 						<hr>
 						<h3>Data Collection Methods</h3>
+						Thanks to its portablity and intuitive design, UMI allows for fast data collection at a rate of 30 seconds/demonstration.
 				        <h4>Comparison with Other Methods</h4>
 						For the cup arrangement task, UMI gripper is over 3× faster than teleportation, reaching 48% of human hand speed.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
