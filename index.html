@@ -300,7 +300,7 @@
 						<!-- <br>
 						<u><b>Capability</b></u> It demonstrates UMI’s ability to capture and transfer fluid and rapid human motions, precise hand-eye coordination (between RGB and propriocep- tion) and timing alignment (between robot and gripper). -->
 						<br>
-						<u><b>Ablation</b></u> Without inference-time latency matching, the policy exhibits significantly more jittery movements, due to the misalignment between observations and action executions.
+						<u><b>Ablation</b></u> Without inference-time observation and action latency matching, the policy exhibits significantly more jittery movements, due to the misalignment between observations and action executions.
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
 								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
@@ -357,7 +357,7 @@
 						<!-- <br>
 						<u><b>Capability</b></u> It tests UMI’s ability to synchronize two-arm coordination. -->
 						<br>
-						<u><b>Ablation</b></u> Without inter-gripper proprioception information, the coordination between the two arms is significantly worse.
+						<u><b>Ablation</b></u> Without inter-gripper proprioception (relative pose between the two grippers), the coordination between the two arms is significantly worse.
 						<!-- For example, when the two arms lift the bottom hem of the shirt, it often misses one of the grasps due to asynchronous grasp actions. -->
 						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
 							<div class="row 50% uniform" style="width: 100%;">
